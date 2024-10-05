@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mode-Selection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="home">
+        <h1 >Snake Mania</h1>
+        <h2 >Select Difficulty Level</h2>
+        <div class="modes">
+            <button id="easy">Easy</button>
+            <button id="medium">Medium</button>
+            <button id="hard">Hard</button>
+        </div>
+    </div>
+    <script>
+        // Redirect to index.html with the selected mode
+        function selectMode(mode) {
+            localStorage.setItem("gameMode", mode); // Store the mode in localStorage
+            window.location.href = "index.html"; // Redirect to the game
+        }
+
+        // Adding event listeners to each button
+        document.getElementById("easy").addEventListener("click", function() {
+            selectMode("easy");
+        });
+        document.getElementById("medium").addEventListener("click", function() {
+            selectMode("medium");
+        });
+        document.getElementById("hard").addEventListener("click", function() {
+            selectMode("hard");
+        });
+    </script>
+    
+</body>
+<script src="script.js"></script>
+</html>

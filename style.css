@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Sixtyfour+Convergence&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.home{
+    background: url("img/bg.jpg");
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home h1{
+    font-weight: 900;
+    position: absolute;
+    top: 25px;
+    font-size: 70px;
+    
+}
+.home h2 {
+    position: absolute;
+    top: 180px;
+    font-size: 35px;
+    font-weight: bold;
+}
+.home .modes{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+}
+.home .modes button{
+    background: linear-gradient(rgb(60, 209, 60),rgb(211, 211, 5));
+    margin-top: 30px;
+    width: 200px;
+    height: 70px;
+    border: 3px solid purple;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 30px;
+    font-weight: bolder;
+}
+#body{
+    background: url("img/bg.jpg");
+    min-height: 100vh;
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#mode {
+    margin: 10px 0;  /* Add space between selector and other elements */
+    padding: 5px;
+    font-size: 16px;
+    border: 2px solid #333;
+    border-radius: 5px;
+}
+
+/* Style the label for the mode selector */
+label[for="mode"] {
+    font-size: 18px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+#modeBox{
+    background: linear-gradient(green,yellow);
+    border: 3px solid black;
+    border-radius: 9px;
+    cursor: pointer;
+    width: 200px;
+    height: 90px;
+    position: absolute;
+    top: 55px;
+    left: 50px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#scoreBox{
+    position: absolute;
+    top: 25px;
+    right: 150px;
+    font-weight: bold;
+    font-size: 40px;
+}
+#hiscoreBox{
+    position: absolute;
+    top: 70px;
+    right: 100px;
+    font-weight: bold;
+    font-size: 40px;
+}
+#board{
+    background: linear-gradient(rgb(131, 212, 131),rgb(219, 219, 123));
+    width: 90vmin;
+    height: 92vmin;
+    position: absolute;
+    right: 400px;
+    border: 3px solid rgb(89, 141, 11);
+    border-radius: 7px;
+    display: grid;
+    grid-template-columns: repeat(18,1fr);
+    grid-template-rows: repeat(18,1fr);
+}
+.head{
+    background: linear-gradient(red,purple);
+    border : 2px solid white;
+    border-radius: 9px;
+    transform: scale(1.02);
+}
+
+.snake{
+    background: linear-gradient(rgb(182, 72, 72),rgb(56, 2, 56));
+    border-color: antiquewhite;
+    border-radius: 50%;
+}
+.food{
+    background: linear-gradient(yellow,red);
+    border-radius: 8px;
+    border: 2px solid rgb(187, 187, 43);
+}
