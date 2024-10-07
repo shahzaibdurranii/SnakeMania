@@ -5,6 +5,8 @@ const moveSound = new Audio("music/move.mp3");
 let speed = 12;
 let lastPaintTime = 0;
 let score = 0;
+let currentDiff = document.getElementById("currentDiff");
+/*let Difficulty = Medium;*/
 let snakeArr = [{ x: 13, y: 15 }];
 food = { x: 6, y: 7 };
 
@@ -12,17 +14,23 @@ food = { x: 6, y: 7 };
 const gameMode = localStorage.getItem("gameMode");
 switch (gameMode) {
   case "easy":
+    currentDiff.innerHTML = "Difficulty: Easy";
     speed = 8; // Set speed for easy mode
     break;
   case "medium":
+    currentDiff.innerHTML = "Difficulty: Medium";
     speed = 12; // Set speed for medium mode
     break;
   case "hard":
+    currentDiff.innerHTML = "Difficulty: Hard";
     speed = 16; // Set speed for hard mode
     break;
   default:
     speed = 12; // Default speed (if no mode is selected)
 }
+//for current difficulty display
+
+
 
 // Add event listener to the "Change Difficulty" button
 document.getElementById("modeBox").addEventListener("click", function () {
